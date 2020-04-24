@@ -9,22 +9,22 @@
 <script>
 'use strict';
 
-let todo = ['掃除','買い物','散歩'];
-list();
+const todo = ['掃除','買い物','散歩'];
+
 
 // 配列の数だけ出力
 function list(){
-    console.log('＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝');
-    for(let i = 0; i < todo.length; i++){
-        console.log(i + ':' + todo[i]);
-    };
+    console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
+    todo.forEach(function(value , index){
+        console.log(index + ':' + value);
+    });
 };
 
-let add = window.prompt('タスクを入力してください');
+const add = prompt('タスクを入力してください');
 todo.push(add);
 list();
 window.alert('新しいタスクを追加しました。');
-let confi =　window.prompt('確認、追加、削除、終了のいずれかを入力してください。');
+let confi = prompt('確認、追加、削除、終了のいずれかを入力してください。');
 </script>
 </body>
 </html>
