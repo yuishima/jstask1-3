@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js制作課題①－３</title>
+</head>
+<body>   
+<script>
+'use strict';
+
+const todo = ['掃除','買い物','散歩'];
+
+
+// 配列の数だけ出力
+function list(){
+    console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
+    todo.forEach(function(value , index){
+        console.log(index + ':' + value);
+    });
+};
+
+const add = prompt('タスクを入力してください');
+todo.push(add);
+list();
+window.alert('新しいタスクを追加しました。');
+let confi = prompt('確認、追加、削除、終了のいずれかを入力してください。');
+</script>
+</body>
+</html>
